@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>{{ product.name}}</h1>
+    <img src="{{product.image}}" width = 300px>
+    <p>Price: {{ product.price }}</p>
+    <p>{{product.description }}</p>
+    <div class="col-md-3"> <!--lays out in a third column-->
+        {{wtf.quick_form(form2)}}
+        {{wtf.quick_form(form)}}
+    </div>
+{% endblock %}

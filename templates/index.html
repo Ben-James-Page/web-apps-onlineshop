@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Pixar Cars Shop</h1>
+    <ul>
+        {% for product in products %}
+            <li><a href="{{ product.link }}">{{ product.name }} - {{ product.price }}</li></a>
+            <img src="{{product.image}}" width = 150px>
+        {% endfor %}
+    </ul>
+{% endblock %}
